@@ -1,4 +1,4 @@
-# battleship
+# Battleship
 Battleship Take Home Coding Exam
 
 ### Specifiction
