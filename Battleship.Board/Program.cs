@@ -64,19 +64,20 @@ namespace Battleship.Board
             });
             LogLine();
 
-            for (int i = 1; i <= _battleshipService.FleetService.Fleets.Count; i++)
+            foreach (var fleet in _battleshipService.FleetService.Fleets)
             {
-                LogLine($">>--Player {i} assemble your fleet--<<");
+                LogLine($">>--Player {fleet.Id} assemble your fleet--<<");
+
                 for (var j = 0; j < _navalService.WarshipService.Warships.Count; j++)
                 {
                     var warshipInput = ValidateInput(input => input.ToNum() != 0
                         && _navalService.WarshipService.IsWarshipExist(input)
-                        && !_battleshipService.FleetService.IsWarshipExist(i, input), 
+                        && !_battleshipService.FleetService.IsWarshipExist(fleet.Id, input), 
                         $"Please select warship({j + 1})");
                     var selectedWarship = _navalService.WarshipService.Find(warshipInput);
 
                     var positionInput = ValidateInput(input => PositionInputValidator(input)
-                        && !_battleshipService.FleetService.IsPositionExist(i, input), 
+                        && !_battleshipService.FleetService.IsPositionExist(fleet.Id, input), 
                         $"Enter the {selectedWarship.Name} bow position");
 
                     var positionY = positionInput.ToPosY();
@@ -91,7 +92,7 @@ namespace Battleship.Board
                     ];
 
                     var availablePositions = positionList.Where(x => x.Item4)
-                        .Where(position => !_battleshipService.FleetService.IsPositionExist(i, $"{position.Item2.ToLetNum()}{position.Item3}"))
+                        .Where(position => !_battleshipService.FleetService.IsPositionExist(fleet.Id, $"{position.Item2.ToLetNum()}{position.Item3}"))
                         .Select(x => $"{x.Item1}: {x.Item2.ToLetNum()}{x.Item3}").ToList();
 
                     LogLine($"Available stern positions for bow {positionInput} -> [{string.Join(" | ", availablePositions)}]");
@@ -104,7 +105,7 @@ namespace Battleship.Board
                     var position2X = position2Input.ToPosX();
                     var warshipPosition = DataHelper.GeneratePostion(positionY, positionX, position2Y, position2X);
 
-                    _battleshipService.AddWarship(i, selectedWarship, warshipPosition);
+                    _battleshipService.AddWarship(fleet.Id, selectedWarship, warshipPosition);
 
                     LogLine($"{selectedWarship.Name} position <={string.Join("=", warshipPosition.Select(x => x))}=>>");
                 }
