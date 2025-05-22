@@ -1,0 +1,53 @@
+[Player-1] Strike position B6 opponent Submarine hit!
+[Player-1] Hit <1> | Missed <0> | Missiles <99>
+[Player-2] Strike position I5 missed!
+[Player-2] Hit <0> | Missed <1> | Missiles <99>
+[Player-1] Strike position F1 missed!
+[Player-1] Hit <1> | Missed <1> | Missiles <98>
+[Player-2] Strike position E9 missed!
+[Player-2] Hit <0> | Missed <2> | Missiles <98>
+[Player-1] Strike position D7 missed!
+[Player-1] Hit <1> | Missed <2> | Missiles <97>
+[Player-2] Strike position F6 missed!
+[Player-2] Hit <0> | Missed <3> | Missiles <97>
+[Player-1] Strike position H6 missed!
+[Player-1] Hit <1> | Missed <3> | Missiles <96>
+[Player-2] Strike position G6 missed!
+[Player-2] Hit <0> | Missed <4> | Missiles <96>
+[Player-1] Strike position J9 missed!
+[Player-1] Hit <1> | Missed <4> | Missiles <95>
+[Player-2] Strike position A7 opponent Battleship hit!
+[Player-2] Hit <1> | Missed <4> | Missiles <95>
+[Player-1] Strike position E8 missed!
+[Player-1] Hit <1> | Missed <5> | Missiles <94>
+[Player-2] Strike position H10 missed!
+[Player-2] Hit <1> | Missed <5> | Missiles <94>
+[Player-1] Strike position H1 missed!
+[Player-1] Hit <1> | Missed <6> | Missiles <93>
+[Player-2] Strike position J4 missed!
+[Player-2] Hit <1> | Missed <6> | Missiles <93>
+[Player-1] Strike position J10 missed!
+[Player-1] Hit <1> | Missed <7> | Missiles <92>
+[Player-2] Strike position B3 opponent Destroyer hit!
+[Player-2] Hit <2> | Missed <6> | Missiles <92>
+[Player-1] Strike position J5 missed!
+[Player-1] Hit <1> | Missed <8> | Missiles <91>
+[Player-2] Strike position B8 opponent PatrolBoat hit!
+[Player-2] Hit <3> | Missed <6> | Missiles <91>
+[Player-1] Strike position C10 missed!
+[Player-1] Hit <1> | Missed <9> | Missiles <90>
+[Player-2] Strike position G3 missed!
+[Player-2] Hit <3> | Missed <7> | Missiles <90>
+[Player-1] Strike position B8 opponent PatrolBoat hit!
+[Player-1] Hit <2> | Missed <9> | Missiles <89>
+[Player-2] Strike position E8 missed!
+[Player-2] Hit <3> | Missed <8> | Missiles <89>
+[Player-1] Strike position J1 missed!
+[Player-1] Hit <2> | Missed <10> | Missiles <88>
+[Player-2] Strike position B5 opponent Submarine hit!
+[Player-2] Hit <4> | Missed <8> | Missiles <88>
+[Player-1] Strike position F10 missed!
+[Player-1] Hit <2> | Missed <11> | Missiles <87>
+[Player-2] Strike position B6 opponent Submarine hit!
+[Player-2] Hit <5> | Missed <8> | Missiles <87>
+***** >>--Winner Player 2--<< *****

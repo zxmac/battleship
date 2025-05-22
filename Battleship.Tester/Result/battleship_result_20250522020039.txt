@@ -1,0 +1,113 @@
+[Player-1] Strike position E2 missed!
+[Player-1] Hit <0> | Missed <1> | Missiles <99>
+[Player-2] Strike position A7 opponent Battleship hit!
+[Player-2] Hit <1> | Missed <0> | Missiles <99>
+[Player-1] Strike position G9 missed!
+[Player-1] Hit <0> | Missed <2> | Missiles <98>
+[Player-2] Strike position I9 missed!
+[Player-2] Hit <1> | Missed <1> | Missiles <98>
+[Player-1] Strike position I9 missed!
+[Player-1] Hit <0> | Missed <3> | Missiles <97>
+[Player-2] Strike position G7 missed!
+[Player-2] Hit <1> | Missed <2> | Missiles <97>
+[Player-1] Strike position J4 missed!
+[Player-1] Hit <0> | Missed <4> | Missiles <96>
+[Player-2] Strike position D8 missed!
+[Player-2] Hit <1> | Missed <3> | Missiles <96>
+[Player-1] Strike position F3 missed!
+[Player-1] Hit <0> | Missed <5> | Missiles <95>
+[Player-2] Strike position E6 missed!
+[Player-2] Hit <1> | Missed <4> | Missiles <95>
+[Player-1] Strike position F4 missed!
+[Player-1] Hit <0> | Missed <6> | Missiles <94>
+[Player-2] Strike position G1 missed!
+[Player-2] Hit <1> | Missed <5> | Missiles <94>
+[Player-1] Strike position E3 missed!
+[Player-1] Hit <0> | Missed <7> | Missiles <93>
+[Player-2] Strike position I7 missed!
+[Player-2] Hit <1> | Missed <6> | Missiles <93>
+[Player-1] Strike position E4 missed!
+[Player-1] Hit <0> | Missed <8> | Missiles <92>
+[Player-2] Strike position C4 missed!
+[Player-2] Hit <1> | Missed <7> | Missiles <92>
+[Player-1] Strike position J9 missed!
+[Player-1] Hit <0> | Missed <9> | Missiles <91>
+[Player-2] Strike position C3 missed!
+[Player-2] Hit <1> | Missed <8> | Missiles <91>
+[Player-1] Strike position C3 missed!
+[Player-1] Hit <0> | Missed <10> | Missiles <90>
+[Player-2] Strike position F5 missed!
+[Player-2] Hit <1> | Missed <9> | Missiles <90>
+[Player-1] Strike position I5 missed!
+[Player-1] Hit <0> | Missed <11> | Missiles <89>
+[Player-2] Strike position I5 missed!
+[Player-2] Hit <1> | Missed <10> | Missiles <89>
+[Player-1] Strike position J2 missed!
+[Player-1] Hit <0> | Missed <12> | Missiles <88>
+[Player-2] Strike position D6 missed!
+[Player-2] Hit <1> | Missed <11> | Missiles <88>
+[Player-1] Strike position G8 missed!
+[Player-1] Hit <0> | Missed <13> | Missiles <87>
+[Player-2] Strike position D5 missed!
+[Player-2] Hit <1> | Missed <12> | Missiles <87>
+[Player-1] Strike position D9 missed!
+[Player-1] Hit <0> | Missed <14> | Missiles <86>
+[Player-2] Strike position G8 missed!
+[Player-2] Hit <1> | Missed <13> | Missiles <86>
+[Player-1] Strike position F8 missed!
+[Player-1] Hit <0> | Missed <15> | Missiles <85>
+[Player-2] Strike position G4 missed!
+[Player-2] Hit <1> | Missed <14> | Missiles <85>
+[Player-1] Strike position C2 missed!
+[Player-1] Hit <0> | Missed <16> | Missiles <84>
+[Player-2] Strike position J3 missed!
+[Player-2] Hit <1> | Missed <15> | Missiles <84>
+[Player-1] Strike position C10 missed!
+[Player-1] Hit <0> | Missed <17> | Missiles <83>
+[Player-2] Strike position A2 opponent Carrier hit!
+[Player-2] Hit <2> | Missed <15> | Missiles <83>
+[Player-1] Strike position A5 opponent Carrier hit!
+[Player-1] Hit <1> | Missed <17> | Missiles <82>
+[Player-2] Strike position D3 missed!
+[Player-2] Hit <2> | Missed <16> | Missiles <82>
+[Player-1] Strike position G2 missed!
+[Player-1] Hit <1> | Missed <18> | Missiles <81>
+[Player-2] Strike position J10 missed!
+[Player-2] Hit <2> | Missed <17> | Missiles <81>
+[Player-1] Strike position E1 missed!
+[Player-1] Hit <1> | Missed <19> | Missiles <80>
+[Player-2] Strike position A5 opponent Carrier hit!
+[Player-2] Hit <3> | Missed <17> | Missiles <80>
+[Player-1] Strike position G3 missed!
+[Player-1] Hit <1> | Missed <20> | Missiles <79>
+[Player-2] Strike position F9 missed!
+[Player-2] Hit <3> | Missed <18> | Missiles <79>
+[Player-1] Strike position B3 opponent Destroyer hit!
+[Player-1] Hit <2> | Missed <20> | Missiles <78>
+[Player-2] Strike position C9 missed!
+[Player-2] Hit <3> | Missed <19> | Missiles <78>
+[Player-1] Strike position J7 missed!
+[Player-1] Hit <2> | Missed <21> | Missiles <77>
+[Player-2] Strike position F7 missed!
+[Player-2] Hit <3> | Missed <20> | Missiles <77>
+[Player-1] Strike position E6 missed!
+[Player-1] Hit <2> | Missed <22> | Missiles <76>
+[Player-2] Strike position G6 missed!
+[Player-2] Hit <3> | Missed <21> | Missiles <76>
+[Player-1] Strike position H7 missed!
+[Player-1] Hit <2> | Missed <23> | Missiles <75>
+[Player-2] Strike position F10 missed!
+[Player-2] Hit <3> | Missed <22> | Missiles <75>
+[Player-1] Strike position B1 opponent Destroyer hit!
+[Player-1] Hit <3> | Missed <23> | Missiles <74>
+[Player-2] Strike position A6 opponent Battleship hit!
+[Player-2] Hit <4> | Missed <22> | Missiles <74>
+[Player-1] Strike position F9 missed!
+[Player-1] Hit <3> | Missed <24> | Missiles <73>
+[Player-2] Strike position J1 missed!
+[Player-2] Hit <4> | Missed <23> | Missiles <73>
+[Player-1] Strike position B9 missed!
+[Player-1] Hit <3> | Missed <25> | Missiles <72>
+[Player-2] Strike position A9 opponent Battleship hit!
+[Player-2] Hit <5> | Missed <23> | Missiles <72>
+***** >>--Winner Player 2--<< *****
