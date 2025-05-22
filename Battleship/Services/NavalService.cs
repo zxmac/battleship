@@ -14,7 +14,7 @@
             _warshipService.Create(WarshipType.Battleship, 4, 25);
             _warshipService.Create(WarshipType.Destroyer, 3, 20);
             _warshipService.Create(WarshipType.Submarine, 3, 20);
-            _warshipService.Create(WarshipType.PatrolBoat, 2, 2);
+            _warshipService.Create(WarshipType.PatrolBoat, 2, 10);
         }
     }
 }
