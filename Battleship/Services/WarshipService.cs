@@ -1,10 +1,11 @@
-﻿using Battleship.Models;
+﻿using Battleship.IService;
+using Battleship.Models;
 
 namespace Battleship.Services
 {
-    public class WarshipService : ServiceBase<Warship>
+    public class WarshipService : ServiceBase<Warship>, IWarshipService
     {
-        public readonly List<Warship> Warships;
+        public List<Warship> Warships {  get; set; }
         public WarshipService()
         {
             Warships = [];

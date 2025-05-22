@@ -1,9 +1,11 @@
-﻿namespace Battleship.Services
+﻿using Battleship.IService;
+
+namespace Battleship.Services
 {
-    public class NavalService
+    public class NavalService : INavalService
     {
-        private readonly WarshipService _warshipService;
-        public WarshipService WarshipService => _warshipService;
+        private readonly IWarshipService _warshipService;
+        public IWarshipService WarshipService => _warshipService;
         public NavalService()
         {
             _warshipService = new WarshipService();

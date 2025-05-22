@@ -1,6 +1,7 @@
 ﻿using System.Linq.Expressions;
 using System.Text;
 using System.Text.RegularExpressions;
+using Battleship.IService;
 using Battleship.Models;
 using Battleship.Services;
 
@@ -10,8 +11,8 @@ namespace Battleship.Board
 {
     public class Program
     {
-        public readonly NavalService _navalService;
-        public readonly BattleshipService _battleshipService;
+        public readonly INavalService _navalService;
+        public readonly IBattleshipService _battleshipService;
 
         public bool AutoTestMode { get; set; }
         public readonly StringBuilder _sb = new();

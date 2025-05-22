@@ -1,11 +1,12 @@
-﻿using Battleship.Models;
+﻿using Battleship.IService;
+using Battleship.Models;
 
 namespace Battleship.Services
 {
-    public class BattleshipService
+    public class BattleshipService : IBattleshipService
     {
-        private readonly FleetService _fleetService;
-        public FleetService FleetService => _fleetService;
+        private readonly IFleetService _fleetService;
+        public IFleetService FleetService => _fleetService;
         public BattleshipService()
         {
             _fleetService = new FleetService();
