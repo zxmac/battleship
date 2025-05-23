@@ -119,57 +119,56 @@ namespace Battleship.Board
 
             while (!_battleshipService.HasWinner())
             {
-                for (var i = 1; i <= _battleshipService.FleetService.Fleets.Count; i++)
+                foreach (var fleet in _battleshipService.FleetService.Fleets)
                 {
-                    var myWarshipInput = string.Empty;
-                    Warship? onAttackWarship = null;
-                    var opponentFleetId = i == 1 ? 2 : 1;
-                    var strikePostion = string.Empty;
+                    string myWarshipInput;
+                    Warship onAttackWarship;
+                    string strikePostion;
 
                     if (!AutoTestMode)
                     {
-                        var warshipsInfo = string.Join("|", _battleshipService.FleetService
-                            .Find(i).Warships.Select(x => $"{x.Id}-{x.Name}-{x.Missiles}").ToArray());
+                        var warshipsInfo = string.Join("|", [.. _battleshipService.FleetService
+                            .Find(fleet.Id).Warships.Select(x => $"{x.Id}-{x.Name}-{x.Missiles}")]);
 
                         myWarshipInput = ValidateInput(input => string.IsNullOrEmpty(input) 
-                            || (input.ToNum() != 0 && _battleshipService.FleetService.IsWarshipAvailablet(i, input)), 
-                            $"[Player-{i}] Select warship [{warshipsInfo}]");
+                            || (input.ToNum() != 0 && _battleshipService.FleetService.IsWarshipAvailablet(fleet.Id, input)), 
+                            $"[Player-{fleet.Id}] Select warship [{warshipsInfo}]");
 
                         if (string.IsNullOrEmpty(myWarshipInput))
-                            onAttackWarship = GetRandomWarship(i);
+                            onAttackWarship = GetRandomWarship(fleet.Id);
                         else
-                            onAttackWarship = _battleshipService.FleetService.GetWarship(i, myWarshipInput);
+                            onAttackWarship = _battleshipService.FleetService.GetWarship(fleet.Id, myWarshipInput);
 
                         strikePostion = ValidateInput(input => PositionInputValidator(input)
-                            && !_battleshipService.FleetService.IsStrikeExist(i, input), 
-                            $"[Player-{i}] Enter {onAttackWarship.Name} strike position");
+                            && !_battleshipService.FleetService.IsStrikeExist(fleet.Id, input), 
+                            $"[Player-{fleet.Id}] Enter {onAttackWarship.Name} strike position");
                     }
                     else
                     {
-                        onAttackWarship = GetRandomWarship(i);
+                        onAttackWarship = GetRandomWarship(fleet.Id);
 
                         while (true)
                         {
                             strikePostion = RandomPosition();
-                            if (!_battleshipService.FleetService.IsStrikeExist(i, strikePostion)) break;
+                            if (!_battleshipService.FleetService.IsStrikeExist(fleet.Id, strikePostion)) break;
                         }
                     }
                     
-                    var warshipTarget = _battleshipService.FleetService.GetWarshipByPosition(opponentFleetId, strikePostion);                    
+                    var warshipTarget = _battleshipService.FleetService.GetWarshipByPosition(fleet.OpponentId, strikePostion);                    
                     onAttackWarship.Strikes.Add(new(strikePostion, warshipTarget != null));
                     onAttackWarship.Missiles -= 1;
 
-                    LogLine($"[Player-{i}] Strike position {strikePostion} {(warshipTarget != null ? $"opponent {warshipTarget.Name} hit" : "missed")}!");
-                    LogLine($"[Player-{i}] Hit <{_battleshipService.FleetService.GetHitCount(i)}> " +
-                        $"| Missed <{_battleshipService.FleetService.GetMissedCount(i)}> " +
-                        $"| Missiles <{_battleshipService.FleetService.GetMissileCount(i)}>");
+                    LogLine($"[Player-{fleet.Id}] Strike position {strikePostion} {(warshipTarget != null ? $"opponent {warshipTarget.Name} hit" : "missed")}!");
+                    LogLine($"[Player-{fleet.Id}] Hit <{_battleshipService.FleetService.GetHitCount(fleet.Id)}> " +
+                        $"| Missed <{_battleshipService.FleetService.GetMissedCount(fleet.Id)}> " +
+                        $"| Missiles <{_battleshipService.FleetService.GetMissileCount(fleet.Id)}>");
 
                     if (_battleshipService.HasWinner()) continue;
                 }
             }
 
-            var fleet = _battleshipService.GetWinner();
-            LogLine($"***** >>--Winner {fleet.Name}--<< *****");
+            var winner = _battleshipService.GetWinner();
+            LogLine($"***** >>--Winner {winner.Name}--<< *****");
         }
 
 

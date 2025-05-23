@@ -8,7 +8,7 @@ namespace Battleship.IService
         IWarshipService WarshipService { get; }
 
         void AddWarship(int id, Warship warship);
-        void Create(int id);
+        void Create(int id, int opponentId);
         Fleet Find(int id);
         int GetHitCount(int id);
         int GetMissedCount(int id);
@@ -19,6 +19,6 @@ namespace Battleship.IService
         bool IsStrikeExist(int id, string position);
         bool IsWarshipAvailablet(int id, string warshipId);
         bool IsWarshipExist(int id, string warshipId);
-        void Map(int id);
+        void Map(int id, int opponentId);
     }
 }

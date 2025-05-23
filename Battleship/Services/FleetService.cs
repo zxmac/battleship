@@ -13,18 +13,19 @@ namespace Battleship.Services
             _warshipService = new WarshipService();
         }
         public Fleet Find(int id) => Fleets.First(x => x.Id == id);
-        public void Map(int id)
+        public void Map(int id, int opponentId)
         {
             MyDto = new Fleet
             {
                 Id = id,
                 Name = "Player " + id,
+                OpponentId = opponentId,
                 Warships = []
             };
         }
-        public void Create(int id)
+        public void Create(int id, int opponentId)
         {
-            Map(id);
+            Map(id, opponentId);
             Fleets.Add(MyDto);
         }
         public void AddWarship(int id, Warship warship)

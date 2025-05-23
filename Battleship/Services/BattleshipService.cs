@@ -13,8 +13,8 @@ namespace Battleship.Services
         }
         public void CreateFleets()
         {
-            _fleetService.Create(1);
-            _fleetService.Create(2);
+            _fleetService.Create(1, 2);
+            _fleetService.Create(2, 1);
         }
         public void AddWarship(int id, Warship warship, HashSet<string> position)
         {
