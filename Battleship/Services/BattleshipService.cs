@@ -6,10 +6,12 @@ namespace Battleship.Services
     public class BattleshipService : IBattleshipService
     {
         private readonly IFleetService _fleetService;
+        private readonly IWarshipService _warshipService;
         public IFleetService FleetService => _fleetService;
         public BattleshipService()
         {
             _fleetService = new FleetService();
+            _warshipService = new WarshipService();
         }
         public void CreateFleets()
         {
@@ -18,8 +20,8 @@ namespace Battleship.Services
         }
         public void AddWarship(int id, Warship warship, HashSet<string> position)
         {
-            _fleetService.WarshipService.Map(warship.Id, warship.Size, warship.Missiles, position);
-            _fleetService.AddWarship(id, _fleetService.WarshipService.MyDto);
+            _warshipService.Map(warship.Id, warship.Size, warship.Missiles, position);
+            _fleetService.AddWarship(id, _warshipService.MyDto);
         }
         public bool HasWinner()
         {

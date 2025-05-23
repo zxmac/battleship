@@ -93,13 +93,13 @@ namespace Battleship.Board
                     ];
 
                     var availablePositions = positionList.Where(x => x.Item4)
-                        .Where(position => !_battleshipService.FleetService.IsPositionExist(fleet.Id, $"{position.Item2.ToLetNum()}{position.Item3}"))
+                        .Where(x => !_battleshipService.FleetService.IsPositionExist(fleet.Id, $"{x.Item2.ToLetNum()}{x.Item3}"))
                         .Select(x => $"{x.Item1}: {x.Item2.ToLetNum()}{x.Item3}").ToList();
 
                     LogLine($"Available stern positions for bow {positionInput} -> [{string.Join(" | ", availablePositions)}]");
 
                     var position2Input = ValidateInput(input => 
-                        positionList.Any(x => $"{x.Item2.ToLetNum()}{x.Item3}" == input), 
+                        positionList.Any(x => $"{x.Item2.ToLetNum()}{x.Item3}" == input.ToUpper()), 
                         $"Enter the {selectedWarship.Name} stern position");
 
                     var position2Y = position2Input.ToPosY();
@@ -158,7 +158,8 @@ namespace Battleship.Board
                     onAttackWarship.Strikes.Add(new(strikePostion, warshipTarget != null));
                     onAttackWarship.Missiles -= 1;
 
-                    LogLine($"[Player-{fleet.Id}] Strike position {strikePostion} {(warshipTarget != null ? $"opponent {warshipTarget.Name} hit" : "missed")}!");
+                    LogLine($"[Player-{fleet.Id}] Strike position {strikePostion} " +
+                        $"{(warshipTarget != null ? $"opponent {warshipTarget.Name} hit" : "missed")}!");
                     LogLine($"[Player-{fleet.Id}] Hit <{_battleshipService.FleetService.GetHitCount(fleet.Id)}> " +
                         $"| Missed <{_battleshipService.FleetService.GetMissedCount(fleet.Id)}> " +
                         $"| Missiles <{_battleshipService.FleetService.GetMissileCount(fleet.Id)}>");
@@ -215,14 +216,13 @@ namespace Battleship.Board
         private string ValidateInput(Expression<Func<string, bool>> exp, string msg)
         {
             string? input = null;
-            var ctr = 0;
-            while (ctr == 0 || !exp.Compile()(input))
+            while (true)
             {
-                if (ctr == 1) msg += " (Please enter a valid input)";
-                Log(msg + ": ");
+                Log($"{msg}{(input is null ? "" : " (Please enter a valid input)")}: ");
                 input = Console.ReadLine();
                 _sb.AppendLine(input);
-                ctr++;
+
+                if (exp.Compile()(input)) break;
             }
             return input;
         }

@@ -5,7 +5,6 @@ namespace Battleship.IService
     public interface IFleetService : IServiceBase<Fleet>
     {
         List<Fleet> Fleets { get; }
-        IWarshipService WarshipService { get; }
 
         void AddWarship(int id, Warship warship);
         void Create(int id, int opponentId);

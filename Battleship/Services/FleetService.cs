@@ -5,13 +5,7 @@ namespace Battleship.Services
 {
     public class FleetService : ServiceBase<Fleet>, IFleetService
     {
-        private readonly IWarshipService _warshipService;
-        public IWarshipService WarshipService => _warshipService;
         public List<Fleet> Fleets { get; set; } = [];
-        public FleetService()
-        {
-            _warshipService = new WarshipService();
-        }
         public Fleet Find(int id) => Fleets.First(x => x.Id == id);
         public void Map(int id, int opponentId)
         {
@@ -46,7 +40,7 @@ namespace Battleship.Services
         }
         public Warship? GetWarshipByPosition(int id, string position)
         {
-            return Find(id).Warships.FirstOrDefault(warship => warship.Position.Any(x => x == position.ToUpper()));
+            return Find(id).Warships.FirstOrDefault(w => w.Position.Any(x => x == position.ToUpper()));
         }
         public bool IsPositionExist(int id, string position)
         {
